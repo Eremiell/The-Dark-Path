@@ -64,7 +64,7 @@
 33. Try to make all names meaningful, yet not overly long.
 34. Always open blocks on all logical constructs (```if```, ```else```, ```while```, ```for```, ```do```, ```switch```).
 35. On constructors and setters, use the same parameter names as are the matching memeber variables. (```void set_value(int value) {this->value = value; return;}```)
-36. In classes, ```public``` members and parents always come first, followed by protected ones and finally private ones. Inside the visibility groups, typedefs and enums come first followed by methods (first constructors, destructor and then anything else) and finally member variables.
+36. In classes, ```public``` members and parents always come first, followed by ```protected``` ones and finally ```private ones```. Inside the visibility groups, enums come first followed by typedefs, methods (first constructors, destructor and then anything else) and finally member variables.
 37. Spaces should go as per these examples: (yes between logic constructs and braces, no between functions and braces, generally yes on outside of any braces or brackets but not inside, yes around math operators, yes after ```,``` and ```;```, no before them etc.)
 ```
 int a = 5 + (10 - 2) / 4 * 2, x = 3;
@@ -81,6 +81,8 @@ std::cin >> q >> d;
 MyClass::MyClass(int a, int b) : a(a), b(b) {}
 z = a << 4 & mask | flags;
 if (this) {
+else if (that) {
+else {
 [=](int a) -> int {return a * modifier;}
 [&, this]() -> int {return this->a * modifier;}
 [=, &value]() -> bool {return &value == nullptr;}
