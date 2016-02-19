@@ -19,12 +19,12 @@
 
 1. Git repo lives in the project main directory.
 2. Each feature should be developed on a properly named branch and merged into master once finished.
-3. No branch should be merged without prior discussion.
+3. No branch should be merged without code review and prior discussion.
 4. Each commit should be cleanly compilable and runnable. (No important warnings, no errors, the binary is stable, doesn't behave weird and doesn't leak.)
 5. Each commit message should be in form of a present simple tense sentence starting with capital letter and ending with full stop and should describe what the commit changes. (```Adds x.```, ```Fixes x.```, ```Modifies x.```, ```Optimizes x.```, ```Rewrites x.``` etc.)
 6. Each commit should be gpg signed.
 7. All commits should be pushed to GitHub, BitBucket, and private repo.
-8. Version tags should be added upon reaching important stages.
+8. Version tags should be added upon reaching important stages, usually after finishing important Trello ```Week```.
 9. SSH key pair should be used for all communication with git repos.
 
 ## Code style:
@@ -102,13 +102,23 @@ std::unordered_map<std::string, std::vector<sf::Texture>> textures;
 ## Trello:
 
 1. All tasks should be added to appropriate lists on trello board.
-2. Appropriate labels should be added to all tasks.
-3. Only person working on the task should update progression labels.
-4. Tasks should link any related issues in issue tracker and any other relevant information.
-5. Task names should be reasonably short and as clear as possible.
-6. Tasks should have short concise description if their names don't make them clear.
-7. Should any task need longer description or discussion, issue in issue tracker should be open for it.
-8. People shouldn't assign tasks to anyone including themselves without prior discussion.
+2. Tasks are split into ```Weeks``` where each ```Week``` represents an incremental update to the previous one.
+3. ```Weeks``` are done once they're done. No hard dates are given on them and they can last for shorter or longer than an actual week.
+4. Appropriate labels should be added to all tasks.
+5. Only person working on the task should update progression labels.
+6. Tasks should link any related issues in issue tracker and any other relevant information.
+7. Task names should be reasonably short and as clear as possible.
+8. Tasks should have short concise description if their names don't make them clear.
+9. Should any task need longer description or discussion, issue in issue tracker should be open for it.
+10. People shouldn't assign tasks to anyone including themselves without prior discussion.
+11. Only person working on the task should move it.
+12. Tasks in preparatory stages should be moved in ```Next``` region.
+13. Tasks in ```Next``` region should be further analysed and crumbled into subtasks when necessary.
+14. Tasks actively worked on should be moved into ```Working on``` region.
+15. Tasks considered done should be moved into ```Done``` region.
+16. Tasks can be moved back from ```Done``` to ```Working on``` from ```Working on``` to ```Next``` and even from ```Next``` to ```Week``` if needed.
+17. Once all tasks in a week are done, reviewed and merged into ```master```, the current ```Week``` should be moved into the past and everything from ```Done``` moved back to it. New ```Week``` can be processed. Previous ```Weeks``` should be left on the board and not archieved without previous discussion.
+18. Tasks can be moved between ```Weeks``` when needed after previous discussion.
 
 ## Issue tracker:
 
